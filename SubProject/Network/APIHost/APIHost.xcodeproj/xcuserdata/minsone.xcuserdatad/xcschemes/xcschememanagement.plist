@@ -6,8 +6,18 @@
 	<dict>
 		<key>APIHost.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>CB19A400257B78B6004FA887</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
