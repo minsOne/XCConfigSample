@@ -3,16 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB19A2A5257B70F6004FA887 /* AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19A2A4257B70F6004FA887 /* AppApp.swift */; };
+		CB19A2A5257B70F6004FA887 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19A2A4257B70F6004FA887 /* MainApp.swift */; };
 		CB19A2A7257B70F6004FA887 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19A2A6257B70F6004FA887 /* ContentView.swift */; };
 		CB19A2A9257B70F8004FA887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB19A2A8257B70F8004FA887 /* Assets.xcassets */; };
 		CB19A2AC257B70F8004FA887 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB19A2AB257B70F8004FA887 /* Preview Assets.xcassets */; };
 		CB19A2B7257B70F8004FA887 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19A2B6257B70F8004FA887 /* AppTests.swift */; };
 		CB19A2C2257B70F8004FA887 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19A2C1257B70F8004FA887 /* AppUITests.swift */; };
+		CB19A3C4257B7553004FA887 /* APIs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB19A3C3257B7553004FA887 /* APIs.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		CB19A2A1257B70F6004FA887 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB19A2A4257B70F6004FA887 /* AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApp.swift; sourceTree = "<group>"; };
+		CB19A2A4257B70F6004FA887 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		CB19A2A6257B70F6004FA887 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB19A2A8257B70F8004FA887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB19A2AB257B70F8004FA887 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +46,7 @@
 		CB19A2BD257B70F8004FA887 /* AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB19A2C1257B70F8004FA887 /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		CB19A2C3257B70F8004FA887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB19A3C3257B7553004FA887 /* APIs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB19A3C4257B7553004FA887 /* APIs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 				CB19A2B5257B70F8004FA887 /* AppTests */,
 				CB19A2C0257B70F8004FA887 /* AppUITests */,
 				CB19A2A2257B70F6004FA887 /* Products */,
+				CB19A3C2257B7553004FA887 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,7 +99,7 @@
 		CB19A2A3257B70F6004FA887 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CB19A2A4257B70F6004FA887 /* AppApp.swift */,
+				CB19A2A4257B70F6004FA887 /* MainApp.swift */,
 				CB19A2A6257B70F6004FA887 /* ContentView.swift */,
 				CB19A2A8257B70F8004FA887 /* Assets.xcassets */,
 				CB19A2AD257B70F8004FA887 /* Info.plist */,
@@ -128,6 +132,14 @@
 				CB19A2C3257B70F8004FA887 /* Info.plist */,
 			);
 			path = AppUITests;
+			sourceTree = "<group>";
+		};
+		CB19A3C2257B7553004FA887 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB19A3C3257B7553004FA887 /* APIs.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +221,7 @@
 				};
 			};
 			buildConfigurationList = CB19A29C257B70F5004FA887 /* Build configuration list for PBXProject "App" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -260,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB19A2A7257B70F6004FA887 /* ContentView.swift in Sources */,
-				CB19A2A5257B70F6004FA887 /* AppApp.swift in Sources */,
+				CB19A2A5257B70F6004FA887 /* MainApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -402,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

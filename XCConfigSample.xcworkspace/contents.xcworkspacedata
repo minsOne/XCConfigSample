@@ -5,13 +5,13 @@
       location = "container:"
       name = "Network">
       <FileRef
-         location = "group:APIs/APIs.xcodeproj">
+         location = "group:SubProject/Network/APIHost/APIHost.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:APIKit/APIKit.xcodeproj">
+         location = "group:SubProject/Network/APIKit/APIKit.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:NetworkHost/NetworkHost.xcodeproj">
+         location = "group:SubProject/Network/APIs/APIs.xcodeproj">
       </FileRef>
    </Group>
    <FileRef
