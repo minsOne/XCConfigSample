@@ -10,15 +10,22 @@
 		CB19A3AF257B74E2004FA887 /* APIs.h in Headers */ = {isa = PBXBuildFile; fileRef = CB19A3A1257B74E2004FA887 /* APIs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB19A3DE257B760E004FA887 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19A3DD257B760E004FA887 /* APIs.swift */; };
 		CB19A3E2257B761E004FA887 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB19A3E1257B761E004FA887 /* APIKit.framework */; };
+		CB19A54A257CB5EA004FA887 /* apis-qa.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A546257CB5EA004FA887 /* apis-qa.xcconfig */; };
+		CB19A54B257CB5EA004FA887 /* apis-dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A547257CB5EA004FA887 /* apis-dev.xcconfig */; };
+		CB19A54C257CB5EA004FA887 /* apis-test.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A548257CB5EA004FA887 /* apis-test.xcconfig */; };
+		CB19A54D257CB5EA004FA887 /* apis-prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A549257CB5EA004FA887 /* apis-prod.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB19A39E257B74E2004FA887 /* APIs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB19A3A1257B74E2004FA887 /* APIs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIs.h; sourceTree = "<group>"; };
 		CB19A3A2257B74E2004FA887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB19A3C0257B7514004FA887 /* NetworkHost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkHost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB19A3DD257B760E004FA887 /* APIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
 		CB19A3E1257B761E004FA887 /* APIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB19A546257CB5EA004FA887 /* apis-qa.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apis-qa.xcconfig"; path = "../../../XCConfig/Network/APIs/apis-qa.xcconfig"; sourceTree = "<group>"; };
+		CB19A547257CB5EA004FA887 /* apis-dev.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apis-dev.xcconfig"; path = "../../../XCConfig/Network/APIs/apis-dev.xcconfig"; sourceTree = "<group>"; };
+		CB19A548257CB5EA004FA887 /* apis-test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apis-test.xcconfig"; path = "../../../XCConfig/Network/APIs/apis-test.xcconfig"; sourceTree = "<group>"; };
+		CB19A549257CB5EA004FA887 /* apis-prod.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apis-prod.xcconfig"; path = "../../../XCConfig/Network/APIs/apis-prod.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 		CB19A394257B74E2004FA887 = {
 			isa = PBXGroup;
 			children = (
+				CB19A52D257CB596004FA887 /* XCConfig */,
 				CB19A3A0257B74E2004FA887 /* APIs */,
 				CB19A39F257B74E2004FA887 /* Products */,
 				CB19A3BF257B7514004FA887 /* Frameworks */,
@@ -64,9 +72,19 @@
 			isa = PBXGroup;
 			children = (
 				CB19A3E1257B761E004FA887 /* APIKit.framework */,
-				CB19A3C0257B7514004FA887 /* NetworkHost.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB19A52D257CB596004FA887 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				CB19A547257CB5EA004FA887 /* apis-dev.xcconfig */,
+				CB19A549257CB5EA004FA887 /* apis-prod.xcconfig */,
+				CB19A546257CB5EA004FA887 /* apis-qa.xcconfig */,
+				CB19A548257CB5EA004FA887 /* apis-test.xcconfig */,
+			);
+			name = XCConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +157,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB19A54D257CB5EA004FA887 /* apis-prod.xcconfig in Resources */,
+				CB19A54A257CB5EA004FA887 /* apis-qa.xcconfig in Resources */,
+				CB19A54B257CB5EA004FA887 /* apis-dev.xcconfig in Resources */,
+				CB19A54C257CB5EA004FA887 /* apis-test.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +180,7 @@
 /* Begin XCBuildConfiguration section */
 		CB19A3B0257B74E2004FA887 /* DEV */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A547257CB5EA004FA887 /* apis-dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -222,6 +245,7 @@
 		};
 		CB19A3B3257B74E2004FA887 /* DEV */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A547257CB5EA004FA887 /* apis-dev.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -249,6 +273,7 @@
 		};
 		CB19A499257BCB38004FA887 /* TEST */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A548257CB5EA004FA887 /* apis-test.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -313,6 +338,7 @@
 		};
 		CB19A49A257BCB38004FA887 /* TEST */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A548257CB5EA004FA887 /* apis-test.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -340,6 +366,7 @@
 		};
 		CB19A49B257BCB45004FA887 /* PROD */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A549257CB5EA004FA887 /* apis-prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -398,6 +425,7 @@
 		};
 		CB19A49C257BCB45004FA887 /* PROD */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A549257CB5EA004FA887 /* apis-prod.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -424,6 +452,7 @@
 		};
 		CB19A522257CAF8C004FA887 /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A546257CB5EA004FA887 /* apis-qa.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -488,6 +517,7 @@
 		};
 		CB19A523257CAF8C004FA887 /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A546257CB5EA004FA887 /* apis-qa.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

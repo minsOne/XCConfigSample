@@ -9,10 +9,17 @@ import Foundation
 import APIHost
 import APIKit
 
-public class APIs {
-    public init() {
-        _ = APIHost()
-        _ = APIKit()
-        print("initialze APIs")
-    }
+public func callAPIs() {
+    #if DEV
+    print("Hello Dev APIs World")
+    #elseif TEST
+    #if QA
+    print("Hello QA APIs World")
+    #else
+    print("Hello TEST APIs World")
+    #endif
+    #elseif PROD
+    print("Hello Real APIs World")
+    #endif
+    print("\n\n")
 }

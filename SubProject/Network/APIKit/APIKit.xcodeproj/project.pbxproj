@@ -10,15 +10,22 @@
 		CB19A389257B74CF004FA887 /* APIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CB19A37B257B74CE004FA887 /* APIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB19A3DA257B75BB004FA887 /* APIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19A3D9257B75BB004FA887 /* APIKit.swift */; };
 		CB19A40E257B78C3004FA887 /* APIHost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB19A40D257B78C3004FA887 /* APIHost.framework */; };
+		CB19A541257CB5DD004FA887 /* apikit-test.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A53D257CB5DD004FA887 /* apikit-test.xcconfig */; };
+		CB19A542257CB5DD004FA887 /* apikit-dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A53E257CB5DD004FA887 /* apikit-dev.xcconfig */; };
+		CB19A543257CB5DD004FA887 /* apikit-prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A53F257CB5DD004FA887 /* apikit-prod.xcconfig */; };
+		CB19A544257CB5DD004FA887 /* apikit-qa.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A540257CB5DD004FA887 /* apikit-qa.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB19A378257B74CE004FA887 /* APIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB19A37B257B74CE004FA887 /* APIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKit.h; sourceTree = "<group>"; };
 		CB19A37C257B74CE004FA887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB19A3BB257B7503004FA887 /* NetworkHost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkHost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB19A3D9257B75BB004FA887 /* APIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKit.swift; sourceTree = "<group>"; };
 		CB19A40D257B78C3004FA887 /* APIHost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIHost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB19A53D257CB5DD004FA887 /* apikit-test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apikit-test.xcconfig"; path = "../../../XCConfig/Network/APIKit/apikit-test.xcconfig"; sourceTree = "<group>"; };
+		CB19A53E257CB5DD004FA887 /* apikit-dev.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apikit-dev.xcconfig"; path = "../../../XCConfig/Network/APIKit/apikit-dev.xcconfig"; sourceTree = "<group>"; };
+		CB19A53F257CB5DD004FA887 /* apikit-prod.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apikit-prod.xcconfig"; path = "../../../XCConfig/Network/APIKit/apikit-prod.xcconfig"; sourceTree = "<group>"; };
+		CB19A540257CB5DD004FA887 /* apikit-qa.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apikit-qa.xcconfig"; path = "../../../XCConfig/Network/APIKit/apikit-qa.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 		CB19A36E257B74CE004FA887 = {
 			isa = PBXGroup;
 			children = (
+				CB19A52C257CB592004FA887 /* XCConfig */,
 				CB19A37A257B74CE004FA887 /* APIKit */,
 				CB19A379257B74CE004FA887 /* Products */,
 				CB19A3BA257B7503004FA887 /* Frameworks */,
@@ -64,9 +72,19 @@
 			isa = PBXGroup;
 			children = (
 				CB19A40D257B78C3004FA887 /* APIHost.framework */,
-				CB19A3BB257B7503004FA887 /* NetworkHost.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB19A52C257CB592004FA887 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				CB19A53E257CB5DD004FA887 /* apikit-dev.xcconfig */,
+				CB19A53F257CB5DD004FA887 /* apikit-prod.xcconfig */,
+				CB19A540257CB5DD004FA887 /* apikit-qa.xcconfig */,
+				CB19A53D257CB5DD004FA887 /* apikit-test.xcconfig */,
+			);
+			name = XCConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +157,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB19A542257CB5DD004FA887 /* apikit-dev.xcconfig in Resources */,
+				CB19A543257CB5DD004FA887 /* apikit-prod.xcconfig in Resources */,
+				CB19A544257CB5DD004FA887 /* apikit-qa.xcconfig in Resources */,
+				CB19A541257CB5DD004FA887 /* apikit-test.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +180,7 @@
 /* Begin XCBuildConfiguration section */
 		CB19A38A257B74CF004FA887 /* DEV */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A53E257CB5DD004FA887 /* apikit-dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -222,6 +245,7 @@
 		};
 		CB19A38D257B74CF004FA887 /* DEV */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A53E257CB5DD004FA887 /* apikit-dev.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -249,6 +273,7 @@
 		};
 		CB19A495257BCB1D004FA887 /* TEST */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A53D257CB5DD004FA887 /* apikit-test.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -313,6 +338,7 @@
 		};
 		CB19A496257BCB1D004FA887 /* TEST */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A53D257CB5DD004FA887 /* apikit-test.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -340,6 +366,7 @@
 		};
 		CB19A497257BCB2B004FA887 /* PROD */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A53F257CB5DD004FA887 /* apikit-prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -398,6 +425,7 @@
 		};
 		CB19A498257BCB2B004FA887 /* PROD */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A53F257CB5DD004FA887 /* apikit-prod.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -424,6 +452,7 @@
 		};
 		CB19A510257CAF5B004FA887 /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A540257CB5DD004FA887 /* apikit-qa.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -488,6 +517,7 @@
 		};
 		CB19A511257CAF5B004FA887 /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A540257CB5DD004FA887 /* apikit-qa.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

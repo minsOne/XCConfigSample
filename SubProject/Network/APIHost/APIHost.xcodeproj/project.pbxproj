@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		CB19A406257B78B6004FA887 /* APIHost.h in Headers */ = {isa = PBXBuildFile; fileRef = CB19A404257B78B6004FA887 /* APIHost.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB19A412257B78F1004FA887 /* APIHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19A411257B78F1004FA887 /* APIHost.swift */; };
+		CB19A532257CB5B0004FA887 /* apihost-prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A52E257CB5AF004FA887 /* apihost-prod.xcconfig */; };
+		CB19A533257CB5B0004FA887 /* apihost-qa.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A52F257CB5AF004FA887 /* apihost-qa.xcconfig */; };
+		CB19A534257CB5B0004FA887 /* apihost-test.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A530257CB5AF004FA887 /* apihost-test.xcconfig */; };
+		CB19A535257CB5B0004FA887 /* apihost-dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A531257CB5AF004FA887 /* apihost-dev.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +20,10 @@
 		CB19A404257B78B6004FA887 /* APIHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIHost.h; sourceTree = "<group>"; };
 		CB19A405257B78B6004FA887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB19A411257B78F1004FA887 /* APIHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHost.swift; sourceTree = "<group>"; };
+		CB19A52E257CB5AF004FA887 /* apihost-prod.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apihost-prod.xcconfig"; path = "../../../XCConfig/Network/APIHost/apihost-prod.xcconfig"; sourceTree = "<group>"; };
+		CB19A52F257CB5AF004FA887 /* apihost-qa.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apihost-qa.xcconfig"; path = "../../../XCConfig/Network/APIHost/apihost-qa.xcconfig"; sourceTree = "<group>"; };
+		CB19A530257CB5AF004FA887 /* apihost-test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apihost-test.xcconfig"; path = "../../../XCConfig/Network/APIHost/apihost-test.xcconfig"; sourceTree = "<group>"; };
+		CB19A531257CB5AF004FA887 /* apihost-dev.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "apihost-dev.xcconfig"; path = "../../../XCConfig/Network/APIHost/apihost-dev.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,7 @@
 		CB19A3F7257B78B6004FA887 = {
 			isa = PBXGroup;
 			children = (
+				CB19A52B257CB58C004FA887 /* XCConfig */,
 				CB19A403257B78B6004FA887 /* APIHost */,
 				CB19A402257B78B6004FA887 /* Products */,
 			);
@@ -53,6 +62,17 @@
 				CB19A411257B78F1004FA887 /* APIHost.swift */,
 			);
 			path = APIHost;
+			sourceTree = "<group>";
+		};
+		CB19A52B257CB58C004FA887 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				CB19A531257CB5AF004FA887 /* apihost-dev.xcconfig */,
+				CB19A52E257CB5AF004FA887 /* apihost-prod.xcconfig */,
+				CB19A52F257CB5AF004FA887 /* apihost-qa.xcconfig */,
+				CB19A530257CB5AF004FA887 /* apihost-test.xcconfig */,
+			);
+			name = XCConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +144,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB19A532257CB5B0004FA887 /* apihost-prod.xcconfig in Resources */,
+				CB19A534257CB5B0004FA887 /* apihost-test.xcconfig in Resources */,
+				CB19A533257CB5B0004FA887 /* apihost-qa.xcconfig in Resources */,
+				CB19A535257CB5B0004FA887 /* apihost-dev.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +167,7 @@
 /* Begin XCBuildConfiguration section */
 		CB19A407257B78B6004FA887 /* DEV */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A531257CB5AF004FA887 /* apihost-dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -207,6 +232,7 @@
 		};
 		CB19A408257B78B6004FA887 /* PROD */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A52E257CB5AF004FA887 /* apihost-prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -265,6 +291,7 @@
 		};
 		CB19A40A257B78B6004FA887 /* DEV */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A531257CB5AF004FA887 /* apihost-dev.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,6 +319,7 @@
 		};
 		CB19A40B257B78B6004FA887 /* PROD */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A52E257CB5AF004FA887 /* apihost-prod.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -318,6 +346,7 @@
 		};
 		CB19A492257BCAE7004FA887 /* TEST */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A530257CB5AF004FA887 /* apihost-test.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -382,6 +411,7 @@
 		};
 		CB19A493257BCAE7004FA887 /* TEST */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A530257CB5AF004FA887 /* apihost-test.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -409,6 +439,7 @@
 		};
 		CB19A519257CAF6E004FA887 /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A52F257CB5AF004FA887 /* apihost-qa.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -473,6 +504,7 @@
 		};
 		CB19A51A257CAF6E004FA887 /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A52F257CB5AF004FA887 /* apihost-qa.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

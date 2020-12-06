@@ -7,8 +7,17 @@
 
 import Foundation
 
-public class APIHost {
-    public init() {
-        print("initialze APIHost")
-    }
+public func callAPIHost() {
+    #if DEV
+    print("Hello Dev APIHost World")
+    #elseif TEST
+    #if QA
+    print("Hello QA APIHost World")
+    #else 
+    print("Hello TEST APIHost World")
+    #endif
+    #elseif PROD
+    print("Hello Real APIHost World")
+    #endif
+    print("\n\n")
 }
