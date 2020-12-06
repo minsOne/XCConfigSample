@@ -13,11 +13,19 @@ import APIs
 @main
 struct MainApp: App {
     var body: some Scene {
-        _ = APIHost()
-        _ = APIKit()
-        _ = APIs()
-        
-        
+        print("\n\n")
+        #if DEV
+        print("Hello Dev World")
+        #elseif TEST
+        #if QA
+        print("Hello QA world")
+        #else
+        print("Hello Test world")
+        #endif
+        #elseif PROD
+        print("Hello real world")
+        #endif
+        print("\n\n")
         return WindowGroup { () -> ContentView in
             return ContentView()
         }

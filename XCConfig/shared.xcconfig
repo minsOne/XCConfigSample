@@ -1,0 +1,4 @@
+OTHER_SWIFT_FLAGS[config=DEV] = $(inherited) -DDEV
+OTHER_SWIFT_FLAGS[config=TEST] = $(inherited) -DTEST
+OTHER_SWIFT_FLAGS[config=QA] = $(inherited) -DTEST -DQA
+OTHER_SWIFT_FLAGS[config=PROD] = $(inherited) -DPROD

@@ -13,7 +13,13 @@
 		CB19A2AC257B70F8004FA887 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB19A2AB257B70F8004FA887 /* Preview Assets.xcassets */; };
 		CB19A2B7257B70F8004FA887 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19A2B6257B70F8004FA887 /* AppTests.swift */; };
 		CB19A2C2257B70F8004FA887 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19A2C1257B70F8004FA887 /* AppUITests.swift */; };
-		CB19A3C4257B7553004FA887 /* APIs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB19A3C3257B7553004FA887 /* APIs.framework */; };
+		CB19A484257B8953004FA887 /* APIHost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB19A481257B8953004FA887 /* APIHost.framework */; };
+		CB19A486257B8953004FA887 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB19A482257B8953004FA887 /* APIKit.framework */; };
+		CB19A488257B8953004FA887 /* APIs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB19A483257B8953004FA887 /* APIs.framework */; };
+		CB19A4E3257BD674004FA887 /* app-test.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A4DF257BD674004FA887 /* app-test.xcconfig */; };
+		CB19A4E4257BD674004FA887 /* app-dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A4E0257BD674004FA887 /* app-dev.xcconfig */; };
+		CB19A4E5257BD674004FA887 /* app-qa.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A4E1257BD674004FA887 /* app-qa.xcconfig */; };
+		CB19A4E6257BD674004FA887 /* app-prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CB19A4E2257BD674004FA887 /* app-prod.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,13 @@
 		CB19A2C1257B70F8004FA887 /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		CB19A2C3257B70F8004FA887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB19A3C3257B7553004FA887 /* APIs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB19A481257B8953004FA887 /* APIHost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIHost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB19A482257B8953004FA887 /* APIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB19A483257B8953004FA887 /* APIs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB19A4DF257BD674004FA887 /* app-test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "app-test.xcconfig"; path = "../../XCConfig/App/app-test.xcconfig"; sourceTree = "<group>"; };
+		CB19A4E0257BD674004FA887 /* app-dev.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "app-dev.xcconfig"; path = "../../XCConfig/App/app-dev.xcconfig"; sourceTree = "<group>"; };
+		CB19A4E1257BD674004FA887 /* app-qa.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "app-qa.xcconfig"; path = "../../XCConfig/App/app-qa.xcconfig"; sourceTree = "<group>"; };
+		CB19A4E2257BD674004FA887 /* app-prod.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "app-prod.xcconfig"; path = "../../XCConfig/App/app-prod.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB19A3C4257B7553004FA887 /* APIs.framework in Frameworks */,
+				CB19A488257B8953004FA887 /* APIs.framework in Frameworks */,
+				CB19A486257B8953004FA887 /* APIKit.framework in Frameworks */,
+				CB19A484257B8953004FA887 /* APIHost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +93,7 @@
 		CB19A298257B70F5004FA887 = {
 			isa = PBXGroup;
 			children = (
+				CB19A4DE257BD65B004FA887 /* XCConfig */,
 				CB19A2A3257B70F6004FA887 /* App */,
 				CB19A2B5257B70F8004FA887 /* AppTests */,
 				CB19A2C0257B70F8004FA887 /* AppUITests */,
@@ -137,9 +153,24 @@
 		CB19A3C2257B7553004FA887 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB19A481257B8953004FA887 /* APIHost.framework */,
+				CB19A482257B8953004FA887 /* APIKit.framework */,
+				CB19A483257B8953004FA887 /* APIs.framework */,
 				CB19A3C3257B7553004FA887 /* APIs.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB19A4DE257BD65B004FA887 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				CB19A4E0257BD674004FA887 /* app-dev.xcconfig */,
+				CB19A4E2257BD674004FA887 /* app-prod.xcconfig */,
+				CB19A4E1257BD674004FA887 /* app-qa.xcconfig */,
+				CB19A4DF257BD674004FA887 /* app-test.xcconfig */,
+			);
+			name = XCConfig;
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +276,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB19A4E4257BD674004FA887 /* app-dev.xcconfig in Resources */,
+				CB19A4E6257BD674004FA887 /* app-prod.xcconfig in Resources */,
+				CB19A4E3257BD674004FA887 /* app-test.xcconfig in Resources */,
+				CB19A4E5257BD674004FA887 /* app-qa.xcconfig in Resources */,
 				CB19A2AC257B70F8004FA887 /* Preview Assets.xcassets in Resources */,
 				CB19A2A9257B70F8004FA887 /* Assets.xcassets in Resources */,
 			);
@@ -310,6 +345,7 @@
 /* Begin XCBuildConfiguration section */
 		CB19A41B257B7D0D004FA887 /* DEV */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E0257BD674004FA887 /* app-dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -349,10 +385,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -371,6 +404,7 @@
 		};
 		CB19A41C257B7D0D004FA887 /* DEV */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E0257BD674004FA887 /* app-dev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -393,6 +427,7 @@
 		};
 		CB19A41D257B7D0D004FA887 /* DEV */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E0257BD674004FA887 /* app-dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +450,7 @@
 		};
 		CB19A41E257B7D0D004FA887 /* DEV */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E0257BD674004FA887 /* app-dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -435,6 +471,7 @@
 		};
 		CB19A41F257B7D12004FA887 /* TEST */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4DF257BD674004FA887 /* app-test.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -474,10 +511,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -496,6 +530,7 @@
 		};
 		CB19A420257B7D12004FA887 /* TEST */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4DF257BD674004FA887 /* app-test.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -518,6 +553,7 @@
 		};
 		CB19A421257B7D12004FA887 /* TEST */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4DF257BD674004FA887 /* app-test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +576,7 @@
 		};
 		CB19A422257B7D12004FA887 /* TEST */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4DF257BD674004FA887 /* app-test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -558,8 +595,9 @@
 			};
 			name = TEST;
 		};
-		CB19A423257B7D17004FA887 /* QA */ = {
+		CB19A4A8257BCBE5004FA887 /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E1257BD674004FA887 /* app-qa.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -592,11 +630,14 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -604,17 +645,18 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = QA;
 		};
-		CB19A424257B7D17004FA887 /* QA */ = {
+		CB19A4A9257BCBE5004FA887 /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E1257BD674004FA887 /* app-qa.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -635,8 +677,9 @@
 			};
 			name = QA;
 		};
-		CB19A425257B7D17004FA887 /* QA */ = {
+		CB19A4AA257BCBE5004FA887 /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E1257BD674004FA887 /* app-qa.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -657,8 +700,9 @@
 			};
 			name = QA;
 		};
-		CB19A426257B7D17004FA887 /* QA */ = {
+		CB19A4AB257BCBE5004FA887 /* QA */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E1257BD674004FA887 /* app-qa.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -677,8 +721,9 @@
 			};
 			name = QA;
 		};
-		CB19A427257B7D20004FA887 /* PROD */ = {
+		CB19A4AC257BCBEC004FA887 /* PROD */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E2257BD674004FA887 /* app-prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -711,11 +756,14 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -723,17 +771,18 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = PROD;
 		};
-		CB19A428257B7D20004FA887 /* PROD */ = {
+		CB19A4AD257BCBEC004FA887 /* PROD */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E2257BD674004FA887 /* app-prod.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -754,8 +803,9 @@
 			};
 			name = PROD;
 		};
-		CB19A429257B7D20004FA887 /* PROD */ = {
+		CB19A4AE257BCBEC004FA887 /* PROD */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E2257BD674004FA887 /* app-prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -776,8 +826,9 @@
 			};
 			name = PROD;
 		};
-		CB19A42A257B7D20004FA887 /* PROD */ = {
+		CB19A4AF257BCBEC004FA887 /* PROD */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB19A4E2257BD674004FA887 /* app-prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -804,8 +855,8 @@
 			buildConfigurations = (
 				CB19A41B257B7D0D004FA887 /* DEV */,
 				CB19A41F257B7D12004FA887 /* TEST */,
-				CB19A423257B7D17004FA887 /* QA */,
-				CB19A427257B7D20004FA887 /* PROD */,
+				CB19A4A8257BCBE5004FA887 /* QA */,
+				CB19A4AC257BCBEC004FA887 /* PROD */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = DEV;
@@ -815,8 +866,8 @@
 			buildConfigurations = (
 				CB19A41C257B7D0D004FA887 /* DEV */,
 				CB19A420257B7D12004FA887 /* TEST */,
-				CB19A424257B7D17004FA887 /* QA */,
-				CB19A428257B7D20004FA887 /* PROD */,
+				CB19A4A9257BCBE5004FA887 /* QA */,
+				CB19A4AD257BCBEC004FA887 /* PROD */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = DEV;
@@ -826,8 +877,8 @@
 			buildConfigurations = (
 				CB19A41D257B7D0D004FA887 /* DEV */,
 				CB19A421257B7D12004FA887 /* TEST */,
-				CB19A425257B7D17004FA887 /* QA */,
-				CB19A429257B7D20004FA887 /* PROD */,
+				CB19A4AA257BCBE5004FA887 /* QA */,
+				CB19A4AE257BCBEC004FA887 /* PROD */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = DEV;
@@ -837,8 +888,8 @@
 			buildConfigurations = (
 				CB19A41E257B7D0D004FA887 /* DEV */,
 				CB19A422257B7D12004FA887 /* TEST */,
-				CB19A426257B7D17004FA887 /* QA */,
-				CB19A42A257B7D20004FA887 /* PROD */,
+				CB19A4AB257BCBE5004FA887 /* QA */,
+				CB19A4AF257BCBEC004FA887 /* PROD */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = DEV;
